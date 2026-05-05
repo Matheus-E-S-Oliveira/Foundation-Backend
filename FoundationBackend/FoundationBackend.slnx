@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/FoundationBackend.Api/">
+    <Project Path="FoundationBackend.ApiCore/FoundationBackend.ApiCore.csproj" />
+    <Project Path="FoundationBackend.WebApi/FoundationBackend.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+</Solution>
