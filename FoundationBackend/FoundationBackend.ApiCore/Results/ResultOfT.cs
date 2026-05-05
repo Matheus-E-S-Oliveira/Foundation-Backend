@@ -1,3 +1,6 @@
+// Documentation:
+// https://www.notion.so/ResultOfT-cs-357559c6ace98042a716f4940b941e86
+
 using FoundationBackend.ApiCore.Errors;
 
 using Microsoft.AspNetCore.Http;
@@ -10,6 +13,7 @@ public class Result<T> : Result
 
     protected Result() {}
 
+    #region HTTP 200 - Ok
     public static Result<T> Ok(T data)
     {
         return new Result<T>
@@ -30,7 +34,9 @@ public class Result<T> : Result
             StatusCode = StatusCodes.Status200OK
         };
     }
+    #endregion
 
+    #region HTTP 201 - Created
     public static Result<T> Created(T data)
     {
         return new Result<T>
@@ -51,7 +57,9 @@ public class Result<T> : Result
             StatusCode = StatusCodes.Status201Created
         };
     }
+    #endregion
 
+    #region HTTP 400 - BadRequest
     public static Result<T> BadRequest(T data, ErrorCode codeError)
     {
         return new Result<T>
@@ -86,4 +94,5 @@ public class Result<T> : Result
             StatusCode = StatusCodes.Status400BadRequest
         };
     }
+    #endregion
 }

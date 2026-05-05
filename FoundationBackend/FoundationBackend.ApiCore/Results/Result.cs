@@ -1,3 +1,6 @@
+// Documentation:
+// https://www.notion.so/Result-cs-357559c6ace9807b914ff3b22bc9dab1
+
 using FoundationBackend.ApiCore.Errors;
 
 using Microsoft.AspNetCore.Http;
@@ -18,6 +21,7 @@ public class Result
 
     protected Result() { }
 
+    #region HTTP 200 - Ok
     public static Result Ok()
     {
         return new Result
@@ -36,7 +40,9 @@ public class Result
             StatusCode = StatusCodes.Status200OK
         };
     }
+    #endregion
 
+    #region HTTP 201 - Created
     public static Result Created()
     {
         return new Result
@@ -55,7 +61,9 @@ public class Result
             StatusCode = StatusCodes.Status201Created
         };
     }
+    #endregion
 
+    #region HTTP 204 - NoContent
     public static Result NoContent()
     {
         return new Result
@@ -74,7 +82,9 @@ public class Result
             StatusCode = StatusCodes.Status204NoContent
         };
     }
+    #endregion
 
+    #region HTTP 400 - BadRequest
     public static Result BadRequest(ErrorCode codeError)
     {
         return new Result
@@ -106,7 +116,9 @@ public class Result
             StatusCode = StatusCodes.Status400BadRequest
         };
     }
+    #endregion
 
+    #region HTTP 401 - Unauthorized
     public static Result Unauthorized(ErrorCode codeError)
     {
         return new Result
@@ -138,7 +150,9 @@ public class Result
             StatusCode = StatusCodes.Status401Unauthorized
         };
     }
+    #endregion
 
+    #region HTTP 403 - Forbidden
     public static Result Forbidden(ErrorCode codeError)
     {
         return new Result
@@ -170,7 +184,9 @@ public class Result
             StatusCode = StatusCodes.Status403Forbidden
         };
     }
+    #endregion
 
+    #region HTTP 404 - NotFound
     public static Result NotFound(ErrorCode codeError)
     {
         return new Result
@@ -202,7 +218,9 @@ public class Result
             StatusCode = StatusCodes.Status404NotFound
         };
     }
+    #endregion
 
+    #region HTTP 409 - Conflit
     public static Result Conflict(ErrorCode codeError)
     {
         return new Result
@@ -234,7 +252,9 @@ public class Result
             StatusCode = StatusCodes.Status409Conflict
         };
     }
+    #endregion
 
+    #region HTTP 500 - InternalServerError
     public static Result InternalServerError(ErrorCode codeError, string message)
     {
         return new Result
@@ -257,7 +277,9 @@ public class Result
             StatusCode = StatusCodes.Status500InternalServerError
         };
     }
+    #endregion
 
+    #region HTTP 501 - NotImplemented
     public static Result NotImplemented(ErrorCode codeError, string message)
     {
         return new Result
@@ -268,4 +290,5 @@ public class Result
             StatusCode = StatusCodes.Status501NotImplemented
         };
     }
+    #endregion
 }
