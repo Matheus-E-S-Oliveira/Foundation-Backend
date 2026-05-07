@@ -1,11 +1,9 @@
 // Documentation:
-// https://www.notion.so/ErrorCode-cs-357559c6ace980949af4f18f3773bd35
+// https://www.notion.so/ErrorCode-cs-359559c6ace9800e850fea4a1611931f
 
 namespace FoundationBackend.ApiCore.Errors;
 
-public enum ErrorCode
+public sealed class ErrorCode(string code)
 {
-    USER_NOT_FOUND,
-    INVALID_EMAIL,
-    PERMISSION_DENIED
+    public string Code { get; } = code;
 }
