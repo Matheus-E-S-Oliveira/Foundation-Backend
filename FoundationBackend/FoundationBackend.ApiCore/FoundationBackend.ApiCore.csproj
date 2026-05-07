@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exceptions\Internal\" />
+    <Folder Include="Middleware\Exceptions\" />
+    <Folder Include="Middleware\Apis\" />
+  </ItemGroup>
+
 </Project>
