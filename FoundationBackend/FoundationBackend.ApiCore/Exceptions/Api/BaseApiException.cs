@@ -7,11 +7,11 @@ namespace FoundationBackend.ApiCore.Exceptions.Api;
 
 public class BaseApiException : Exception
 {
-    public ErrorCode ErrorCode { get; private set; }
+    public ErrorCodes ErrorCode { get; private set; }
 
     public int StatusCode { get; private set; }
 
-    protected BaseApiException(ErrorCode errorCode, int statusCode, string message) : base(message)
+    protected BaseApiException(ErrorCodes errorCode, int statusCode, string message) : base(message)
     {
         ErrorCode = errorCode;
         StatusCode = statusCode;

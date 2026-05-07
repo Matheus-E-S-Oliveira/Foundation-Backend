@@ -60,7 +60,7 @@ public class Result<T> : Result
     #endregion
 
     #region HTTP 400 - BadRequest
-    public static Result<T> BadRequest(T data, ErrorCode codeError)
+    public static Result<T> BadRequest(T data, ErrorCodes codeError)
     {
         return new Result<T>
         {
@@ -71,7 +71,7 @@ public class Result<T> : Result
         };
     }
 
-    public static Result<T> BadRequest(T data, ErrorCode codeError, string error)
+    public static Result<T> BadRequest(T data, ErrorCodes codeError, string error)
     {
         return new Result<T>
         {
@@ -83,7 +83,7 @@ public class Result<T> : Result
         };
     }
 
-    public static Result<T> BadRequest(T data, ErrorCode codeError, List<string> errors)
+    public static Result<T> BadRequest(T data, ErrorCodes codeError, List<string> errors)
     {
         return new Result<T>
         {

@@ -1,11 +1,11 @@
 // Documentation:
 // https://www.notion.so/ErrorCode-cs-357559c6ace980949af4f18f3773bd35
 
+using FoundationBackend.ApiCore.Errors.Api;
+
 namespace FoundationBackend.ApiCore.Errors;
 
-public enum ErrorCode
+public static class ErrorCodes
 {
-    USER_NOT_FOUND,
-    INVALID_EMAIL,
-    PERMISSION_DENIED
+    public static ApiErrorCodes Api { get; } = new();
 }
