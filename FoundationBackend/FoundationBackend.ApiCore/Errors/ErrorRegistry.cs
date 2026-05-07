@@ -5,7 +5,7 @@ using FoundationBackend.ApiCore.Errors.Api;
 
 namespace FoundationBackend.ApiCore.Errors;
 
-public static class ErrorCodes
+public static class ErrorRegistry
 {
     public static ApiErrorCodes Api { get; } = new();
 }

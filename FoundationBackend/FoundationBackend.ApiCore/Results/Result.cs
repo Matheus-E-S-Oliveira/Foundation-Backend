@@ -15,7 +15,7 @@ public class Result
 
     public int StatusCode { get; protected set; }
 
-    public ErrorCodes? CodeError { get; protected set; }
+    public ErrorRegistry? CodeError { get; protected set; }
 
     public IReadOnlyList<string> Errors { get; protected set; } = [];
 
@@ -85,7 +85,7 @@ public class Result
     #endregion
 
     #region HTTP 400 - BadRequest
-    public static Result BadRequest(ErrorCodes codeError)
+    public static Result BadRequest(ErrorRegistry codeError)
     {
         return new Result
         {
@@ -95,7 +95,7 @@ public class Result
         };
     }
 
-    public static Result BadRequest(ErrorCodes codeError, string error)
+    public static Result BadRequest(ErrorRegistry codeError, string error)
     {
         return new Result
         {
@@ -106,7 +106,7 @@ public class Result
         };
     }
 
-    public static Result BadRequest(ErrorCodes codeError, List<string> errors)
+    public static Result BadRequest(ErrorRegistry codeError, List<string> errors)
     {
         return new Result
         {
@@ -119,7 +119,7 @@ public class Result
     #endregion
 
     #region HTTP 401 - Unauthorized
-    public static Result Unauthorized(ErrorCodes codeError)
+    public static Result Unauthorized(ErrorRegistry codeError)
     {
         return new Result
         {
@@ -129,7 +129,7 @@ public class Result
         };
     }
 
-    public static Result Unauthorized(ErrorCodes codeError, string error)
+    public static Result Unauthorized(ErrorRegistry codeError, string error)
     {
         return new Result
         {
@@ -140,7 +140,7 @@ public class Result
         };
     }
 
-    public static Result Unauthorized(ErrorCodes codeError, List<string> errors)
+    public static Result Unauthorized(ErrorRegistry codeError, List<string> errors)
     {
         return new Result
         {
@@ -153,7 +153,7 @@ public class Result
     #endregion
 
     #region HTTP 403 - Forbidden
-    public static Result Forbidden(ErrorCodes codeError)
+    public static Result Forbidden(ErrorRegistry codeError)
     {
         return new Result
         {
@@ -163,7 +163,7 @@ public class Result
         };
     }
 
-    public static Result Forbidden(ErrorCodes codeError, string error)
+    public static Result Forbidden(ErrorRegistry codeError, string error)
     {
         return new Result
         {
@@ -174,7 +174,7 @@ public class Result
         };
     }
 
-    public static Result Forbidden(ErrorCodes codeError, List<string> errors)
+    public static Result Forbidden(ErrorRegistry codeError, List<string> errors)
     {
         return new Result
         {
@@ -187,7 +187,7 @@ public class Result
     #endregion
 
     #region HTTP 404 - NotFound
-    public static Result NotFound(ErrorCodes codeError)
+    public static Result NotFound(ErrorRegistry codeError)
     {
         return new Result
         {
@@ -197,7 +197,7 @@ public class Result
         };
     }
 
-    public static Result NotFound(ErrorCodes codeError, string error)
+    public static Result NotFound(ErrorRegistry codeError, string error)
     {
         return new Result
         {
@@ -208,7 +208,7 @@ public class Result
         };
     }
 
-    public static Result NotFound(ErrorCodes codeError, List<string> errors)
+    public static Result NotFound(ErrorRegistry codeError, List<string> errors)
     {
         return new Result
         {
@@ -221,7 +221,7 @@ public class Result
     #endregion
 
     #region HTTP 409 - Conflit
-    public static Result Conflict(ErrorCodes codeError)
+    public static Result Conflict(ErrorRegistry codeError)
     {
         return new Result
         {
@@ -231,7 +231,7 @@ public class Result
         };
     }
 
-    public static Result Conflict(ErrorCodes codeError, string error)
+    public static Result Conflict(ErrorRegistry codeError, string error)
     {
         return new Result
         {
@@ -242,7 +242,7 @@ public class Result
         };
     }
 
-    public static Result Conflict(ErrorCodes codeError, List<string> errors)
+    public static Result Conflict(ErrorRegistry codeError, List<string> errors)
     {
         return new Result
         {
@@ -255,7 +255,7 @@ public class Result
     #endregion
 
     #region HTTP 500 - InternalServerError
-    public static Result InternalServerError(ErrorCodes codeError, string message)
+    public static Result InternalServerError(ErrorRegistry codeError, string message)
     {
         return new Result
         {
@@ -266,7 +266,7 @@ public class Result
         };
     }
 
-    public static Result InternalServerError(ErrorCodes codeError, string message, string error)
+    public static Result InternalServerError(ErrorRegistry codeError, string message, string error)
     {
         return new Result
         {
@@ -280,7 +280,7 @@ public class Result
     #endregion
 
     #region HTTP 501 - NotImplemented
-    public static Result NotImplemented(ErrorCodes codeError, string message)
+    public static Result NotImplemented(ErrorRegistry codeError, string message)
     {
         return new Result
         {

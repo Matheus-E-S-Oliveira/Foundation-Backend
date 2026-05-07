@@ -2,13 +2,13 @@ namespace FoundationBackend.ApiCore.Errors.Api;
 
 public sealed class ApiErrorCodes
 {
-    public const string API_CONFLICT = "API_CONFLICT";
+    public static readonly ErrorCode API_CONFLICT = new("API_CONFLICT");
 
-    public const string API_FORBIDDEN = "API_FORBIDDEN";
+    public static readonly ErrorCode API_FORBIDDEN = new("API_FORBIDDEN");
 
-    public const string API_NOT_FOUND = "API_NOT_FOUND";
+    public static readonly ErrorCode API_NOT_FOUND = new("API_NOT_FOUND");
 
-    public const string API_UNAUTHORIZED = "API_UNAUTHORIZED";
+    public static readonly ErrorCode API_UNAUTHORIZED = new("API_UNAUTHORIZED");
 
-    public const string API_VALIDATION = "API_VALIDATION";
+    public static readonly ErrorCode API_VALIDATION = new("API_VALIDATION");
 }
