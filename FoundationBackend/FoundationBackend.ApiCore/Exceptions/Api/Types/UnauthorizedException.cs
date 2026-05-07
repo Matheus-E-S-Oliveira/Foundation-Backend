@@ -1,3 +1,5 @@
+// Documentation:
+// https://www.notion.so/UnauthorizedException-cs-359559c6ace980bba535e447b429a920
 using FoundationBackend.ApiCore.Errors;
 
 using Microsoft.AspNetCore.Http;

@@ -1,3 +1,6 @@
+// Documentation:
+// https://www.notion.so/ApiErrorCodes-cs-359559c6ace98024abc3eba73dc71670
+
 namespace FoundationBackend.ApiCore.Errors.Api;
 
 public sealed class ApiErrorCodes

@@ -1,3 +1,6 @@
+// Documentation:
+// https://www.notion.so/ValidationException-cs-359559c6ace980a0ae44dcf477a36e86
+
 using FoundationBackend.ApiCore.Errors;
 
 using Microsoft.AspNetCore.Http;

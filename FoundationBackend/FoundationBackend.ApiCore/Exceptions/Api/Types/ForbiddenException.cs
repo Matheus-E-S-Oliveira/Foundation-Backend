@@ -1,3 +1,6 @@
+// Documentation:
+// https://www.notion.so/ForbiddenException-cs-359559c6ace9803c9c88f5adc5b01e5b
+
 using FoundationBackend.ApiCore.Errors;
 
 using Microsoft.AspNetCore.Http;

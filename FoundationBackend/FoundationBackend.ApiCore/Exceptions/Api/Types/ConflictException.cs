@@ -1,3 +1,6 @@
+// Documentation:
+// https://www.notion.so/ConflictException-cs-359559c6ace98000bc1dcd8fba1ec742
+
 using FoundationBackend.ApiCore.Errors;
 
 using Microsoft.AspNetCore.Http;
